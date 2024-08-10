@@ -44,3 +44,9 @@
     color: transparent;
     -webkit-text-stroke: 1px #FFFFFF;
   }
+  .nav-links > a:hover {
+    opacity: 0.8;
+  }
+  .footer-links > a:hover {
+    opacity: 0.8;
+  }
