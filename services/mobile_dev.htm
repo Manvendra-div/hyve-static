@@ -38,8 +38,8 @@
 </head>
 
 <body class="flex flex-col justify-between min-h-screen bg-[#101820]">
-    <main class="flex flex-col justify-between items-center h-[58vh] max-h-[348px] text-white bg-[url('../assets/mobile_dev_hero_banner.png')]">
-        <div class="flex justify-center items-center w-full bg-[#10182080] p-5 border-b-[1px] border-[#384B5E]">
+    <main class="relative flex flex-col justify-between items-center h-[58vh] max-h-[348px] text-white bg-[url('../assets/mobile_dev_hero_banner.png')] z-0">
+        <div class="flex justify-center items-center w-full bg-[#10182080] p-5 border-b-[1px] border-[#384B5E] z-20">
             <div class="flex justify-between items-center w-full lg:w-[88%] max-w-[1400px]">
                 <a href="/" class="w-fit h-fit">
                     <svg width="260" height="105" viewBox="0 0 260 105" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -108,13 +108,14 @@
                 </div>
             </div>
         </div>
-        <div class="h-max w-full flex justify-center items-end py-8">
+        <div class="h-max w-full flex justify-center items-end py-8 z-20">
             <div class="w-full lg:w-[85%] max-w-[1300px] flex flex-col justify-center items-start space-y-5">
                 <h1 class="text-6xl inter-medium">
                     Mobile App Development <br />Services
                 </h1>
             </div>
         </div>
+        <div class="absolute top-0 left-0 h-full w-full bg-black/60 z-10"></div>
     </main>
     <div class="h-[40vh] max-h-[240px] w-full flex justify-center items-center mb-8">
         <div
