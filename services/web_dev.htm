@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +38,8 @@
 </head>
 
 <body class="flex flex-col justify-between min-h-screen bg-[#101820]">
-    <main class="relative flex flex-col justify-between items-center h-[58vh] max-h-[348px] text-white bg-[url('../assets/mobile_dev_hero_banner.png')] z-0">
+    <main
+        class="relative flex flex-col justify-between items-center h-[58vh] max-h-[348px] text-white bg-[url('../assets/mobile_dev_hero_banner.png')] z-0">
         <div class="flex justify-center items-center w-full bg-[#10182080] p-5 border-b-[1px] border-[#384B5E] z-20">
             <div class="flex justify-between items-center w-full lg:w-[88%] max-w-[1400px]">
                 <a href="/" class="w-fit h-fit">
@@ -101,38 +102,70 @@
                     </svg>
                 </a>
                 <div class="hidden w-[30%] lg:flex justify-between items-center text-white inter-medium nav-links">
-                    <a href="/" class="transition duration-300">Home</a><a href="/services/mobile_dev.htm"
-                        class="transition duration-300 text-gray-300">Services</a><a href="../about.htm"
-                        class="transition duration-300">About
-                        us</a><a href="../contact.htm" class="transition duration-300">Contact us</a>
+                    <a href="/" class="transition duration-300 text-gray-300">Home</a>
+                    <div id="service-container" class="relative">
+                        <span id="service" class="cursor-pointer">Services</span>
+                        <div id="service-dropdown"
+                          class="opacity-0 flex justify-between absolute top-[120%] -left-96 w-[700px] backdrop-blur-xl bg-[#24313F]/70 rounded-[12px] p-[24px] border-[1px] border-[#4D647C]">
+                          <div class="w-[33%] flex flex-col gap-3 h-full"><a href="/services/mobile_dev.htm"
+                              class="hover:text-white hover:underline">Mobile App Development</a>
+                            <a href="/services/web_dev.htm" class="hover:text-white hover:underline">Web Development</a>
+                            <a href="/services/uiux_design.htm" class="hover:text-white hover:underline">UI/UX Design</a>
+                            <a href="/services/uiux_design.htm" class="hover:text-white hover:underline">Cross Platform
+                              Development</a>
+                          </div>
+                          <div class="w-[33%] flex flex-col gap-3 h-full">
+                            <a href="/services/uiux_design.htm" class="hover:text-white hover:underline">Custom Software
+                              Development</a>
+                            <a href="/services/uiux_design.htm" class="hover:text-white hover:underline">Project Management</a>
+                            <a href="/services/uiux_design.htm" class="hover:text-white hover:underline">DevOps Services</a>
+                            <a href="/services/uiux_design.htm" class="hover:text-white hover:underline">IT Support Services</a>
+                          </div>
+                          <div class="w-[33%] flex flex-col gap-3 h-full">
+                            <a href="/services/uiux_design.htm" class="hover:text-white hover:underline">Artificial Intelligence</a>
+                            <a href="/services/uiux_design.htm" class="hover:text-white hover:underline">Quality Assurance</a>
+                            <a href="/services/uiux_design.htm" class="hover:text-white hover:underline">Business Analysis</a>
+                            <a href="/services/uiux_design.htm" class="hover:text-white hover:underline">Solution Architecture</a>
+                          </div>
+                        </div>
+                      </div><a href="./about.htm" class="transition duration-300">About
+                        us</a><a href="./contact.htm" class="transition duration-300">Contact us</a>
                 </div>
+                <button class="lg:hidden">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.16699 12.8333H34.8337" stroke="#EEEFEE" stroke-width="2" stroke-linecap="round" />
+                        <path d="M9.16699 22H27.5003" stroke="#EEEFEE" stroke-width="2" stroke-linecap="round" />
+                        <path d="M9.16699 31.1667H20.167" stroke="#EEEFEE" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
             </div>
         </div>
-        <div class="h-max w-full flex justify-center items-end py-8 z-20">
-            <div class="w-full lg:w-[85%] max-w-[1300px] flex flex-col justify-center items-start space-y-5">
-                <h1 class="text-6xl inter-medium">
-                    Mobile App Development <br />Services
+        <div class="h-max w-full flex justify-center items-end py-8 z-10">
+            <div
+                class="w-[90%] lg:w-[85%] max-w-[1300px] flex flex-col justify-center items-center lg:items-start space-y-5">
+                <h1 class="text-3xl lg:text-6xl inter-medium">
+                    High-Performance Web Development for Leading Businesses
                 </h1>
             </div>
         </div>
-        <div class="absolute top-0 left-0 h-full w-full bg-black/60 z-10"></div>
+        <div class="absolute top-0 left-0 h-full w-full bg-black/60 z-[5]"></div>
     </main>
     <div class="h-[40vh] max-h-[240px] w-full flex justify-center items-center mb-8">
         <div
-            class="w-full h-full lg:w-[85%] max-w-[1300px] flex justify-start p-20 bg-[#EEEFEE] items-center text-[#101820]">
-            <h1 class="text-4xl inter-medium w-[70%]">
-                "Expertly crafted custom mobile apps, powered by our skilled teams and
-                streamlined processes."
+            class="w-[90%] h-full lg:w-[85%] max-w-[1300px] flex justify-start p-14 lg:p-20 bg-[#EEEFEE] items-center text-[#101820]">
+            <h1 class="text-xl lg:text-4xl inter-medium lg:w-[70%]">
+                "Comprehensive Web Development Services of the Highest Caliber"
             </h1>
         </div>
     </div>
-    <div class="h-[130vh] max-h-[960px] w-full flex justify-center items-center mb-8">
+    <div class="min-h-[130vh] lg:max-h-[960px] w-full flex justify-center items-center mb-8">
         <div
-            class="w-full h-full lg:w-[85%] max-w-[1300px] flex flex-col justify-between py-20 px-16 bg-[#EEEFEE] text-[#24313F]">
-            <h1 class="text-4xl inter-SemiBold w-[58%]">
+            class="w-[90%] h-full lg:w-[85%] max-w-[1300px] flex flex-col justify-between py-10 px-10 lg:py-20 lg:px-16 bg-[#EEEFEE] text-[#24313F] space-y-4">
+            <h1 class="text-3xl lg:text-4xl inter-SemiBold lg:w-[58%]">
                 Types of mobile apps we develop
             </h1>
-            <div class="flex items-center inter-medium w-[70%] text-base space-x-[16px]">
+            <div
+                class="flex flex-wrap items-center inter-medium lg:w-[70%] text-xs lg:text-base gap-[8px] lg:gap-[16px]">
                 <button class="bg-[#101820] text-[#EEEFEE] px-3 py-2 rounded-[6px]">
                     Native app
                 </button>
@@ -146,11 +179,12 @@
                     Progressive web App
                 </button>
             </div>
-            <div class="w-full flex justify-between items-center h-fit">
-                <div class="w-[50%] h-fit">
+            <div class="w-full flex flex-col lg:flex-row justify-between items-center h-fit">
+                <div class="w-full lg:w-[50%] h-fit">
                     <img src="../assets/native-app-development.png" />
                 </div>
-                <div class="flex flex-col justify-between w-[50%] border-[1px] border-[#C7C7C7] h-full px-10 py-8">
+                <div
+                    class="flex flex-col justify-between w-full lg:w-[50%] border-[1px] border-[#C7C7C7] h-full px-10 py-8 gap-2">
                     <span class="text-[#101820] inter-medium text-3xl">Native Mobile App Development</span><span
                         class="inter-medium text-base text-[#24313F]">Creating native Android and iOS apps maximizes the
                         potential of
@@ -158,16 +192,16 @@
                         experience with a seamless and intuitive design."</span>
                     <div>
                         <button
-                            class="bg-[#101820] text-[#EEEFEE] px-3 py-2 rounded-[6px] border-[1px] border-[#D0D5DD] plus-jakarta-sans-bold text-base">
-                            Request Services</button><button
-                            class="px-3 py-2 plus-jakarta-sans-bold text-[#101820] text-base">See more...</button>
+                            class="bg-[#101820] text-[#EEEFEE] px-3 py-2 rounded-[6px] border-[1px] border-[#D0D5DD] plus-jakarta-sans-bold text-base w-full lg:w-fit">
+                            Request Services</button>
+                        <button class="px-3 py-2 plus-jakarta-sans-bold text-[#101820] text-base">See more...</button>
                     </div>
                 </div>
 
             </div>
-            <div class="w-full flex justify-between items-center">
+            <div class="w-full flex flex-col lg:flex-row justify-between items-center lg:items-start gap-3">
                 <div
-                    class="w-[30%] border-[1px] border-[#C7C7C7] rounded-[12px] p-8 flex flex-col justify-between space-y-2 h-full">
+                    class="lg:w-[30%] border-[1px] border-[#C7C7C7] rounded-[12px] p-8 flex flex-col justify-between space-y-2 h-full">
                     <span class="inter-SemiBold text-[#282B28] text-xl">Advantages</span>
                     <div class="relative text-[#080907] inter-regular flex justify-normal">
                         <div class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"></div><span
@@ -183,7 +217,7 @@
                     </div>
                 </div>
                 <div
-                    class="w-[30%] border-[1px] border-[#C7C7C7] rounded-[12px] p-8 flex flex-col justify-between space-y-2 h-full">
+                    class="lg:w-[30%] border-[1px] border-[#C7C7C7] rounded-[12px] p-8 flex flex-col justify-between space-y-2 h-full">
                     <span class="inter-SemiBold text-[#282B28] text-xl">Limitations</span>
                     <div class="relative text-[#080907] inter-regular flex justify-normal">
                         <div class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"></div><span class="ml-4">High
@@ -199,7 +233,7 @@
                     </div>
                 </div>
                 <div
-                    class="w-[30%] border-[1px] border-[#C7C7C7] rounded-[12px] p-8 flex flex-col justify-between space-y-2 h-full">
+                    class="lg:w-[30%] border-[1px] border-[#C7C7C7] rounded-[12px] p-8 flex flex-col justify-between space-y-2 h-full">
                     <span class="inter-SemiBold text-[#282B28] text-xl">Advantages</span>
                     <div class="relative text-[#080907] inter-regular flex justify-normal">
                         <div class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"></div><span class="ml-4">Complex
@@ -209,21 +243,17 @@
                         <div class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"></div><span
                             class="ml-4">High-performance needs and smooth UI</span>
                     </div>
-                    <div class="relative text-[#080907] inter-regular flex justify-normal">
-                        <div class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"></div><span class="ml-4">
-                        </span>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="h-[100vh] max-h-[720px] w-full flex justify-center items-center mb-8">
+    <div class="min-h-[100vh] w-full flex justify-center items-center mb-8">
         <div
-            class="w-full h-full lg:w-[85%] max-w-[1300px] flex flex-col justify-between py-20 px-16 bg-[#EEEFEE] text-[#24313F]">
-            <h1 class="text-4xl inter-SemiBold w-[58%]">
+            class="w-[90%] h-full lg:w-[85%] max-w-[1300px] flex flex-col justify-between py-10 px-10 lg:py-20 lg:px-16 bg-[#EEEFEE] text-[#24313F] space-y-4 ">
+            <h1 class="text-4xl inter-SemiBold lg:w-[58%]">
                 Types of mobile apps we develop
             </h1>
-            <div class="flex items-center inter-medium w-[40%] text-base space-x-[16px]">
+            <div class="flex items-center inter-medium lg:w-[40%] text-xs lg:text-base gap-[8px] lg:gap-[16px]">
                 <button class="bg-[#101820] text-[#EEEFEE] px-3 py-2 rounded-[6px]">
                     Social Media
                 </button>
@@ -232,46 +262,51 @@
                 </button>
 
             </div>
-            <div class="w-full flex justify-between items-center h-[70%]">
-                <div class="flex flex-col justify-between w-[50%] border-[1px] border-[#C7C7C7] h-full px-10 py-8">
+            <div class="w-full flex flex-col-reverse lg:flex-row justify-between items-center h-[70%]">
+                <div
+                    class="flex flex-col justify-between lg:w-[50%] border-[1px] border-[#C7C7C7] h-full px-10 py-8 gap-4">
                     <span class="text-[#101820] inter-medium text-3xl">Wisho</span><span
                         class="inter-medium text-base text-[#24313F]">Creating native Android and iOS apps maximizes the
                         potential of
                         mobile platforms, offering robust feature sets and a user-friendly
                         experience with a seamless and intuitive design."</span>
                     <div class="flex justify-normal items-center space-x-2">
-                        <div class="rounded-md bg-[#C7C7C7] p-2 plus-jakarta-sans-medium text-[#101820] text-sm">Request
+                        <div
+                            class="rounded-md bg-[#C7C7C7] p-2 plus-jakarta-sans-medium text-[#101820] text-xs lg:text-sm text-nowrap">
+                            Request
                             Services</div>
-                        <div class="rounded-md bg-[#C7C7C7] p-2 plus-jakarta-sans-medium text-[#101820] text-sm">Request
-                            Services</div>
+                        <div
+                            class="rounded-md bg-[#C7C7C7] p-2 plus-jakarta-sans-medium text-[#101820] text-xs lg:text-sm text-nowrap">
+                            Request Services</div>
                     </div>
                     <button
-                        class="bg-[#101820] w-fit text-[#EEEFEE] px-3 py-2 rounded-[6px] border-[1px] border-[#D0D5DD] plus-jakarta-sans-bold text-base">
+                        class="bg-[#101820] w-fit text-[#EEEFEE] px-3 py-2 rounded-[6px] border-[1px] border-[#D0D5DD] plus-jakarta-sans-bold text-xs lg:text-base">
                         Request Services</button>
 
                 </div>
-                <div class="w-[50%] h-fit">
-                    <img src="../assets/native-app-development.png" />
+                <div class="w-full lg:w-[50%] h-fit">
+                    <img src="/assets/native-app-development.png" class="w-full h-full" />
                 </div>
 
             </div>
         </div>
     </div>
-    <div class="h-[50vh] max-h-[300px] w-full flex justify-center items-center mb-8 ">
+    <div class="h-[50vh] w-full flex justify-center items-center mb-8">
         <div
-            class="w-full h-full lg:w-[85%] max-w-[1300px] flex flex-col justify-center items-start text-[#EEEFEE] bg-[#0A0C0F] rounded-2xl px-16 space-y-2">
+            class="w-[90%] h-[80%] lg:w-[85%] max-w-[1300px] flex flex-col justify-center items-start text-[#EEEFEE] bg-[#0A0C0F] rounded-2xl px-16 space-y-2">
             <span class="plus-jakarta-sans-bold text-2xl">Learn More About Our Services</span>
             <span class="plus-jakarta-sans-regular text-lg">get in touch</span>
         </div>
     </div>
     </div>
-    <div class="h-[100vh] max-h-[600px] w-full flex justify-center items-center mb-8">
+    <div class="min-h-[100vh] max-h-[900px] lg:max-h-[600px] w-full flex justify-center items-center mb-8">
         <div
-            class="w-full h-full lg:w-[85%] max-w-[1300px] flex flex-col justify-between py-20 px-16 bg-[#EEEFEE] text-[#24313F]">
-            <h1 class="text-4xl inter-SemiBold w-[58%]">
+            class="w-[90%] h-full lg:w-[85%] max-w-[1300px] flex flex-col justify-between py-10 px-10 lg:py-20 lg:px-16 bg-[#EEEFEE] text-[#24313F] space-y-4">
+            <h1 class="text-3xl lg:text-4xl inter-SemiBold lg:w-[58%]">
                 Hyve's App Development Scope
             </h1>
-            <div class="flex items-center inter-medium w-[80%] text-base space-x-[16px]">
+            <div
+                class="flex flex-wrap items-center inter-medium lg:w-[80%] text-xs lg:text-base gap-[8px] lg:gap-[16px]">
                 <button class="bg-[#101820] text-[#EEEFEE] px-3 py-2 rounded-[6px]">
                     Iso App Development
                 </button>
@@ -282,8 +317,8 @@
                     Cross-Platform App Devvelopment
                 </button>
             </div>
-            <div class="w-full flex justify-between items-center h-[60%]">
-                <div class="flex flex-col justify-normal w-[50%] h-full px-10 py-8 space-y-4">
+            <div class="w-full flex flex-col lg:flex-row justify-between items-center h-[60%]">
+                <div class="flex flex-col justify-normal lg:w-[50%] h-full px-10 py-8 space-y-4">
                     <span class="inter-medium text-lg">With our extensive resources, Hyve can swiftly become your
                         reliable IT partner for mobile development on iOS:</span>
                     <div class="flex flex-col ">
@@ -313,62 +348,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-[50%] h-fit">
-                    <img src="../assets/native-app-development.png" />
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="h-[100vh] max-h-[720px] w-full flex justify-center items-center mb-8">
-        <div
-            class="w-full h-full lg:w-[85%] max-w-[1300px] flex flex-col justify-center py-20 px-16 bg-[#EEEFEE] text-[#24313F] space-y-3">
-            <h1 class="text-6xl inter-SemiBold w-[90%]">
-                Your efficient development team
-            </h1>
-            <span class="w-[86%] text-[#24313F] inter-medium">Hybrid app development offers a unified and easily
-                manageable code base, broad reach, cost-effective access to native features, and enhanced
-                compatibility</span>
-
-            <div class="flex flex-wrap justify-between items-center w-full space-y-3">
-                <div class="flex flex-col space-y-3 w-[23%]">
-                    <img src="../assets/team_member1.png" class="w-full" />
-                    <div class="inter-medium flex justify-normal items-center space-x-2">
-                        <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4.5" cy="5" r="4.5" fill="#57718C" />
-                        </svg>
-                        <span><span class="text-xl">Abhi</span><span class="text-base">(CEO)</span></span>
-                    </div>
-                </div>
-                <div class="flex flex-col space-y-3 w-[23%]">
-                    <img src="../assets/team_member2.png" class="w-full" />
-                    <div class="inter-medium flex justify-normal items-center space-x-2">
-                        <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4.5" cy="5" r="4.5" fill="#57718C" />
-                        </svg>
-                        <span><span class="text-xl">Abhi</span><span class="text-base">(CEO)</span></span>
-                    </div>
-                </div>
-                <div class="flex flex-col space-y-3 w-[23%]">
-                    <img src="../assets/team_member3.png" class="w-full" />
-                    <div class="inter-medium flex justify-normal items-center space-x-2">
-                        <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4.5" cy="5" r="4.5" fill="#57718C" />
-                        </svg>
-                        <span><span class="text-xl">Abhi</span><span class="text-base">(CEO)</span></span>
-                    </div>
-                </div>
-                <div class="flex flex-col space-y-3 w-[23%]">
-                    <svg class="w-full h-full" width="190" height="192" viewBox="0 0 190 192" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect width="190" height="192" fill="#D9D9D9" />
-                    </svg>
-                    <div class="inter-medium flex justify-normal items-center space-x-2">
-                        <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4.5" cy="5" r="4.5" fill="#57718C" />
-                        </svg>
-                        <span><span class="text-xl">Abhi</span><span class="text-base">(CEO)</span></span>
-                    </div>
+                <div class="w-full lg:w-[50%] h-fit">
+                    <img src="/assets/native-app-development.png" />
                 </div>
 
             </div>
@@ -377,14 +358,14 @@
     </div>
     <div class="w-full h-[100vh] max-h-[900px] flex justify-center items-center">
         <div
-            class="w-full h-full lg:w-[85%] max-w-[1300px] py-20 px-16 bg-[#EEEFEE] text-[#24313F] flex justify-center items-center">
-            <div class="flex justify-between items-start w-full h-[80%]">
-                <div class="inter-medium w-[40%]">
+            class="w-[90%] h-full lg:w-[85%] max-w-[1300px] py-8 px-8 lg:py-20 lg:px-16 bg-[#EEEFEE] text-[#24313F] flex justify-center items-center">
+            <div class="flex flex-col lg:flex-row justify-between items-center lg:tems-start w-full h-[80%]">
+                <div class="inter-medium lg:w-[40%]">
                     Lorem ipsum dolor sit amet consectetur. Ultrices neque egestas purus
                     ullamcorper at mi odio.
                 </div>
                 <div
-                    class="w-[40%] h-full max-h-[600px] flex flex-col justify-between items-center nunito-sans text-lg">
+                    class="w-full lg:w-[40%] h-full max-h-[600px] flex flex-col justify-between items-center nunito-sans text-lg">
                     <input class="w-full border-b-[1px] border-black placeholder-black py-2 outline-none bg-transparent"
                         type="text" placeholder="Name" />
                     <input class="w-full border-b-[1px] border-black placeholder-black py-2 outline-none bg-transparent"
@@ -409,11 +390,15 @@
 
         requestAnimationFrame(raf)
     </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="/animations.js"></script>
 </body>
-<footer class="w-full h-[70vh] max-h-[700px] flex flex-col justify-between items-center pt-20">
-    <div class="w-full h-full bg-[#101820] flex justify-center items-center">
+<footer class="w-full min-h-[80vh] lg:h-[70vh] max-h-[700px] flex flex-col justify-between items-center">
+    <div class="w-full h-full bg-[#101820] flex justify-center items-center footer-links px-10 py-8 lg:py-0">
         <div class="w-full lg:w-[90%] max-w-[1500px] h-[80%] flex justify-between items-center">
-            <div class="h-full flex flex-col justify-between w-[10%]">
+            <div class="h-full flex flex-col justify-between w-[90%] lg:w-[10%]">
                 <svg width="260" height="105" viewBox="0 0 260 105" fill="none" xmlns="http://www.w3.org/2000/svg"
                     class="w-[100px] h-[41px]">
                     <mask id="mask0_71_185" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -471,7 +456,27 @@
                             fill="white" />
                     </g>
                 </svg>
-                <div class="w-full flex justify-between items-center">
+                <div class="lg:hidden h-full flex flex-col space-y-[12px] footer-links mt-10">
+                    <span class="dm-sans-bold text-sm text-[#F9FAFB]">Products</span>
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">Our Story</a>
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">Contact Us</a>
+                </div>
+                <div class="lg:hidden h-full flex flex-col space-y-[12px] footer-links mt-10">
+                    <span class="dm-sans-bold text-sm text-[#F9FAFB]">Services</span>
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">Application Development</a>
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">Mobile App Development</a>
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">API Integrations</a>
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">Quality Assurance</a>
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">DevOps and DevSecOps</a>
+                </div>
+                <div class="lg:hidden flex flex-col space-y-[12px] h-full footer-links mt-10">
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">Cyber Security and Information
+                        Security</a>
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">Generative AI Development</a>
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">Solution Architecture</a>
+                    <a href="#" class="plus-jakarta-sans-regular text-sm text-[#F9FAFB]">IT Solutions Consultancy</a>
+                </div>
+                <div class="flex justify-between items-center w-[50%] lg:w-full mt-10">
                     <a href="#">
                         <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -497,7 +502,7 @@
                     </a>
                 </div>
             </div>
-            <div class="relative w-[70%] h-full flex justify-between items-center">
+            <div class="hidden lg:flex relative w-[70%] h-full justify-between items-center">
                 <div class="w-[20%] h-full flex flex-col space-y-[12px] footer-links">
                     <span class="dm-sans-bold text-lg text-[#F9FAFB]">Products</span>
                     <a href="#" class="plus-jakarta-sans-regular text-lg text-[#F9FAFB]">Our Story</a>
