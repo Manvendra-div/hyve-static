@@ -5,6 +5,7 @@ const mobileNavPanel = document.getElementById("mobile-nav-panel");
 const tabImg = document.getElementById("tab-img");
 const tabHeading = document.getElementById("tab-heading");
 const tabDesc = document.getElementById("tab-desc");
+const backwindow=document.getElementById("mobile-nav-panel-wrapper")
 const mob_data = [
   {
     heading: "Native Mobile App Development",
@@ -101,7 +102,7 @@ function changeTabs(mod, index) {
       document.getElementById("advantage-wrapper").style.display = "none";
     }
     if (mob_data[currentTab].limitations) {
-      ocument.getElementById("limitation-wrapper").style.display = "flex";
+      document.getElementById("limitation-wrapper").style.display = "flex";
       mob_data[currentTab].limitations.map((item) => {
         const limitation = document.createElement("div");
         limitation.classList.add(
@@ -160,7 +161,27 @@ function hideDropdown() {
 }
 
 function showMobileNav() {
-  gsap.to(mobileNavPanel, {
+
+  backwindow.addEventListener("click",closeMobileNav)
+  backwindow.classList.add(
+    "hidden",
+    "fixed",
+    "left-0",
+    "top-0",
+    "w-full",
+    "h-full",
+    "bg-[#000000]",
+    "opacity-0",
+    "z-50"
+  )
+  const tl = gsap.timeline()
+  tl.to(backwindow, {
+    display:"block",
+    opacity: 0.9,
+    duration: 0.5,
+    ease: "power3.out",
+  })
+  tl.to(mobileNavPanel, {
     left: 0,
     zIndex: 999,
     duration: 0.5,
@@ -174,6 +195,12 @@ function showMobileNav() {
 }
 
 function closeMobileNav() {
+  gsap.to(backwindow, {
+    opacity: 0,
+    display:"none",
+    duration: 0.5,
+    ease: "power3.out",
+  })
   gsap.to(mobileNavPanel, {
     left: "-100%",
     zIndex: 0,
