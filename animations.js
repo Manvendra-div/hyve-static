@@ -177,12 +177,13 @@ function showMobileNav() {
   const tl = gsap.timeline()
   tl.to(backwindow, {
     display:"block",
-    opacity: 0.6,
+    opacity: 0.7,
     duration: 0.5,
     ease: "power3.out",
   })
   tl.to(mobileNavPanel, {
     right: 0,
+    opacity:100,
     zIndex: 999,
     duration: 0.5,
     ease: "power3.out",
