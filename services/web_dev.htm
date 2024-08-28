@@ -416,17 +416,20 @@
           class="w-full flex flex-col lg:flex-row justify-between items-center h-fit"
         >
           <div class="w-full lg:w-[50%] h-fit">
-            <img src="/assets/native-app-development.png" />
+            <img
+              src="/assets/web_development_application_banner.png"
+              id="tab-img"
+            />
           </div>
           <div
             class="flex flex-col justify-between w-full lg:w-[50%] border-[1px] border-[#C7C7C7] h-full px-10 py-8 gap-2"
           >
-            <span class="text-[#101820] inter-medium text-3xl"
-              >Native Mobile App Development</span
-            ><span class="inter-medium text-base text-[#24313F]"
-              >Creating native Android and iOS apps maximizes the potential of
-              mobile platforms, offering robust feature sets and a user-friendly
-              experience with a seamless and intuitive design."</span
+            <span class="text-[#101820] inter-medium text-3xl" id="tab-heading"
+              >Web Application Development</span
+            ><span class="inter-medium text-base text-[#24313F]" id="tab-desc"
+              >At Hyve, our web engineering specialists craft and refine
+              optimized web solutions that empower your users to efficiently
+              achieve their goals online.</span
             >
             <div>
               <button
@@ -442,95 +445,6 @@
             </div>
           </div>
         </div>
-        <div
-          class="w-full flex flex-col lg:flex-row justify-between items-center lg:items-start gap-3"
-        >
-          <div
-            class="lg:w-[30%] border-[1px] border-[#C7C7C7] rounded-[12px] p-8 flex flex-col justify-between space-y-2 h-full"
-          >
-            <span class="inter-SemiBold text-[#282B28] text-xl"
-              >Advantages</span
-            >
-            <div
-              class="relative text-[#080907] inter-regular flex justify-normal"
-            >
-              <div
-                class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"
-              ></div>
-              <span class="ml-4">Superior app performance and speed</span>
-            </div>
-            <div
-              class="relative text-[#080907] inter-regular flex justify-normal"
-            >
-              <div
-                class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"
-              ></div>
-              <span class="ml-4">User-friendly UI/UX design</span>
-            </div>
-            <div
-              class="relative text-[#080907] inter-regular flex justify-normal"
-            >
-              <div
-                class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"
-              ></div>
-              <span class="ml-4">Enhanced security</span>
-            </div>
-          </div>
-          <div
-            class="lg:w-[30%] border-[1px] border-[#C7C7C7] rounded-[12px] p-8 flex flex-col justify-between space-y-2 h-full"
-          >
-            <span class="inter-SemiBold text-[#282B28] text-xl"
-              >Limitations</span
-            >
-            <div
-              class="relative text-[#080907] inter-regular flex justify-normal"
-            >
-              <div
-                class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"
-              ></div>
-              <span class="ml-4">High initial and maintenance costs</span>
-            </div>
-            <div
-              class="relative text-[#080907] inter-regular flex justify-normal"
-            >
-              <div
-                class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"
-              ></div>
-              <span class="ml-4">Longer time-to-market</span>
-            </div>
-            <div
-              class="relative text-[#080907] inter-regular flex justify-normal"
-            >
-              <div
-                class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"
-              ></div>
-              <span class="ml-4">Lack of code reusability</span>
-            </div>
-          </div>
-          <div
-            class="lg:w-[30%] border-[1px] border-[#C7C7C7] rounded-[12px] p-8 flex flex-col justify-between space-y-2 h-full"
-          >
-            <span class="inter-SemiBold text-[#282B28] text-xl"
-              >Advantages</span
-            >
-            <div
-              class="relative text-[#080907] inter-regular flex justify-normal"
-            >
-              <div
-                class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"
-              ></div>
-              <span class="ml-4">Complex mobile applications</span>
-            </div>
-            <div
-              class="relative text-[#080907] inter-regular flex justify-normal"
-            >
-              <div
-                class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"
-              ></div>
-              <span class="ml-4">High-performance needs and smooth UI</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <div class="min-h-[100vh] w-full flex justify-center items-center mb-8">
@@ -538,28 +452,40 @@
         class="w-[90%] h-full lg:w-[85%] max-w-[1300px] flex flex-col justify-between py-10 px-10 lg:py-20 lg:px-16 bg-[#EEEFEE] text-[#24313F] space-y-4"
       >
         <h1 class="text-4xl inter-SemiBold lg:w-[58%]">
-          Types of mobile apps we develop
+          Web development solutions
         </h1>
         <div
-          class="flex items-center inter-medium lg:w-[40%] text-xs lg:text-base gap-[8px] lg:gap-[16px]"
+          class="flex items-center inter-medium lg:w-[50%] text-xs lg:text-base gap-[8px] lg:gap-[16px]"
         >
-          <button class="bg-[#101820] text-[#EEEFEE] px-3 py-2 rounded-[6px]">
-            Social Media
+          <button
+            class="border-[1px] border-[#C7C7C7] text-[#C7C7C7] hover:bg-[#101820] focus:bg-[#101820] hover:text-[#EEEFEE] focus:text-[#EEEFEE] px-3 py-2 rounded-[6px]" onclick="changeTabs('web1',0)"
+          >
+            Wisho Website
           </button>
           <button
-            class="border-[1px] border-[#C7C7C7] text-[#C7C7C7] px-3 py-2 rounded-[6px]"
+            class="border-[1px] border-[#C7C7C7] text-[#C7C7C7] hover:bg-[#101820] focus:bg-[#101820] hover:text-[#EEEFEE] focus:text-[#EEEFEE] px-3 py-2 rounded-[6px]" onclick="changeTabs('web1',1)"
           >
-            Services
+            MakeMyDesign Website
+          </button>
+          <button
+            class="border-[1px] border-[#C7C7C7] text-[#C7C7C7] hover:bg-[#101820] focus:bg-[#101820] hover:text-[#EEEFEE] focus:text-[#EEEFEE] px-3 py-2 rounded-[6px]" onclick="changeTabs('web1',2)"
+          >
+            Wow Cabs Website
           </button>
         </div>
         <div
-          class="w-full flex flex-col-reverse lg:flex-row justify-between items-center h-[70%]"
+          class="w-full flex flex-col-reverse lg:flex-row justify-between items-center h-[70%] gap-3"
         >
           <div
             class="flex flex-col justify-between lg:w-[50%] border-[1px] border-[#C7C7C7] h-full px-10 py-8 gap-4"
           >
-            <span class="text-[#101820] inter-medium text-3xl">Wisho</span
-            ><span class="inter-medium text-base text-[#24313F]"
+            <span
+              class="text-[#101820] inter-medium text-3xl"
+              id="tab-heading-secondary"
+              >Wisho</span
+            ><span
+              class="inter-medium text-base text-[#24313F]"
+              id="tab-desc-secondary"
               >Creating native Android and iOS apps maximizes the potential of
               mobile platforms, offering robust feature sets and a user-friendly
               experience with a seamless and intuitive design."</span
@@ -584,8 +510,9 @@
           </div>
           <div class="w-full lg:w-[50%] h-fit">
             <img
-              src="/assets/native-app-development.png"
+              src="/assets/wisho_about_us.png"
               class="w-full h-full"
+              id="tab-img-secondary"
             />
           </div>
         </div>
@@ -614,18 +541,18 @@
         <div
           class="flex flex-wrap items-center inter-medium lg:w-[80%] text-xs lg:text-base gap-[8px] lg:gap-[16px]"
         >
-          <button class="bg-[#101820] text-[#EEEFEE] px-3 py-2 rounded-[6px]">
-            Iso App Development
+          <button class="border-[1px] border-[#C7C7C7] text-[#C7C7C7] hover:bg-[#101820] focus:bg-[#101820] hover:text-[#EEEFEE] focus:text-[#EEEFEE] px-3 py-2 rounded-[6px]" onclick="changeTabs('web2',0)">
+            Wisho Website
           </button>
           <button
-            class="border-[1px] border-[#C7C7C7] text-[#C7C7C7] px-3 py-2 rounded-[6px]"
+            class="border-[1px] border-[#C7C7C7] text-[#C7C7C7] hover:bg-[#101820] focus:bg-[#101820] hover:text-[#EEEFEE] focus:text-[#EEEFEE] px-3 py-2 rounded-[6px]" onclick="changeTabs('web2',1)"
           >
-            Andrdid App Development
+          MakeMyDesign Website
           </button>
           <button
-            class="border-[1px] border-[#C7C7C7] text-[#C7C7C7] px-3 py-2 rounded-[6px]"
+            class="border-[1px] border-[#C7C7C7] text-[#C7C7C7] hover:bg-[#101820] focus:bg-[#101820] hover:text-[#EEEFEE] focus:text-[#EEEFEE] px-3 py-2 rounded-[6px]" onclick="changeTabs('web2',2)"
           >
-            Cross-Platform App Devvelopment
+          Wow Cabs Website
           </button>
         </div>
         <div
@@ -634,7 +561,7 @@
           <div
             class="flex flex-col justify-normal lg:w-[50%] h-full px-10 py-8 space-y-4"
           >
-            <span class="inter-medium text-lg"
+            <span class="inter-medium text-lg" id="tab-desc-1"
               >With our extensive resources, Hyve can swiftly become your
               reliable IT partner for mobile development on iOS:</span
             >
@@ -644,7 +571,7 @@
               >
                 <div class="flex items-center space-x-2">
                   <div class="bg-[#24313F] p-1 rounded-full h-fit"></div>
-                  <p>Over 90 high-load iOS apps delivered</p>
+                  <p id="tab-p-1">Over 90 high-load iOS apps delivered</p>
                 </div>
               </div>
               <div
@@ -652,7 +579,7 @@
               >
                 <div class="flex items-center space-x-2">
                   <div class="bg-[#24313F] p-1 rounded-full h-fit"></div>
-                  <p>More than 130 skilled iOS engineers in our team</p>
+                  <p id="tab-p-2">More than 130 skilled iOS engineers in our team</p>
                 </div>
               </div>
               <div
@@ -660,7 +587,7 @@
               >
                 <div class="flex items-center space-x-2">
                   <div class="bg-[#24313F] p-1 rounded-full h-fit"></div>
-                  <p>
+                  <p id="tab-p-3">
                     35% of our staff are senior specialists and team leaders
                   </p>
                 </div>
@@ -670,7 +597,7 @@
               >
                 <div class="flex items-center space-x-2">
                   <div class="bg-[#24313F] p-1 rounded-full h-fit"></div>
-                  <p>9 years of combined iOS experience</p>
+                  <p id="tab-p-4">9 years of combined iOS experience</p>
                 </div>
               </div>
             </div>
@@ -692,8 +619,8 @@
           class="flex flex-col lg:flex-row justify-between items-center lg:tems-start w-full h-[80%]"
         >
           <div class="inter-medium lg:w-[40%]">
-            Lorem ipsum dolor sit amet consectetur. Ultrices neque egestas purus
-            ullamcorper at mi odio.
+            Hyve AI Labs - FZCO 46501 - 001, IFZA Business Park, Dubai Digital
+            Park - DSO, Dubai, United Arab Emirates
           </div>
           <div
             class="w-full lg:w-[40%] h-full max-h-[600px] flex flex-col justify-between items-center nunito-sans text-lg"

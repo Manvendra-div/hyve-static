@@ -115,7 +115,68 @@ const mob_data2 = [
     p3: "More than 80 cross-platform projects successfully completed",
   },
 ];
-const web_data = [{}];
+const web_data = [
+  {
+    heading: "Web Application Development",
+    desc: "At Hyve, our web engineering specialists craft and refine optimized web solutions that empower your users to efficiently achieve their goals online.",
+    image: "/assets/web_development_application_banner.png",
+  },
+  {
+    heading: "Custom Web Development",
+    desc: "Hyve is fully equipped with the expertise and resources to support any project you outsource in the Custom Web Development space. Whether it's tackling UI/UX challenges, ensuring responsiveness, optimizing performance, or addressing any other needs, we unlock the full potential of web technologies for your business.",
+    image: "/assets/custom_web_devlopment_banner.png",
+  },
+  {
+    heading: "Staff Augmentation",
+    desc: "When your project requires additional web development expertise, Hyve swiftly allocates the skilled talent you need, all within your budget. With a proven track record of delivering custom projects, we understand the power of effective Staff Augmentation.",
+    image: "/assets/staff_argumentation.png",
+  },
+  {
+    heading: "Technological Partnership",
+    desc: "As your technology partner, Hyve goes beyond the role of a traditional service provider. We collaborate closely with your organization, driving growth and innovation. More than just a vendor, we help shape your corporate strategies and create a competitive IT landscape.",
+    image: "/assets/technology_partnership.png",
+  },
+];
+const web_data1 = [
+  {
+    heading: "Wisho Website",
+    desc: "A Platform to Empower Admin Wishes This web solution is a centralized hub for streamlining interactions with users",
+    image: "/assets/wisho_about_us.png",
+  },
+  {
+    heading: "MakeMyDesign Website",
+    desc: "A Design Portal for Creative Collaborations This web platform serves as a centralized space for seamless interactions with clients",
+    image: "/assets/makemy_design_about_us.png",
+  },
+  {
+    heading: "Wow Cabs Website",
+    desc: "A Central Hub for Booking and Managing Cab Services This web solution acts as a centralized platform for engaging with customers",
+    image: "/assets/wow_cabs.png",
+  },
+];
+const web_data2 = [
+  {
+    desc: "A Platform to Empower Admin Wishes This web solution is a centralized hub for streamlining interactions with users:",
+    p1: "Enhanced customer support",
+    p2: "Seamless dissemination of announcements",
+    p3: "Streamlined communication for efficient wish management",
+    p4: "Integrated transaction handling",
+  },
+  {
+    desc: "A Design Portal for Creative Collaborations This web platform serves as a centralized space for seamless interactions with clients:",
+    p1: "Personalized customer service for designers and clients",
+    p2: "Easy sharing and updating of design concepts and information",
+    p3: "Effective communication channels for feedback and revisions",
+    p4: "Management of payments and project transactions",
+  },
+  {
+    desc: "A Central Hub for Booking and Managing Cab Services This web solution acts as a centralized platform for engaging with customers:",
+    p1: "Reliable customer service for ride bookings and inquiries",
+    p2: "Clear communication of fare details and service information",
+    p3: "Streamlined communication for ride management",
+    p4: "Secure transaction processing for payments and billing",
+  },
+];
 function changeTabs(mod, index) {
   let currentTab = index;
   if (mod === "mob") {
@@ -191,10 +252,26 @@ function changeTabs(mod, index) {
     document.getElementById("tab-p-2").innerHTML = mob_data2[currentTab].p2;
     document.getElementById("tab-p-3").innerHTML = mob_data2[currentTab].p3;
     if (!mob_data2[currentTab].p4) {
-      document.getElementById("tab-p-4").innerHTML="";
+      document.getElementById("tab-p-4").innerHTML = "";
     } else {
       document.getElementById("tab-p-4").innerHTML = mob_data2[currentTab].p4;
     }
+  } else if (mod === "web") {
+    tabHeading.innerHTML = web_data[currentTab].heading;
+    tabDesc.innerHTML = web_data[currentTab].desc;
+    tabImg.src = web_data[currentTab].image;
+  } else if (mod === "web1") {
+    tabHeadingsecond.innerHTML = web_data1[currentTab].heading;
+    tabDescsecond.innerHTML = web_data1[currentTab].desc;
+    tabImgsecond.src = web_data1[currentTab].image;
+  } else if (mod === "web2") {
+    document.getElementById("tab-desc-1").innerHTML =
+      mob_data2[currentTab].desc;
+    document.getElementById("tab-p-1").innerHTML = web_data2[currentTab].p1;
+    document.getElementById("tab-p-2").innerHTML = web_data2[currentTab].p2;
+    document.getElementById("tab-p-3").innerHTML = web_data2[currentTab].p3;
+
+    document.getElementById("tab-p-4").innerHTML = web_data2[currentTab].p4;
   }
 }
 
