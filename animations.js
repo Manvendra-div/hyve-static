@@ -5,7 +5,10 @@ const mobileNavPanel = document.getElementById("mobile-nav-panel");
 const tabImg = document.getElementById("tab-img");
 const tabHeading = document.getElementById("tab-heading");
 const tabDesc = document.getElementById("tab-desc");
-const backwindow=document.getElementById("mobile-nav-panel-wrapper")
+const backwindow = document.getElementById("mobile-nav-panel-wrapper");
+const tabHeadingsecond = document.getElementById("tab-heading-secondary");
+const tabDescsecond = document.getElementById("tab-desc-secondary");
+const tabImgsecond = document.getElementById("tab-img-secondary");
 const mob_data = [
   {
     heading: "Native Mobile App Development",
@@ -70,15 +73,55 @@ const mob_data = [
     imgPath: "/assets/pwa.png",
   },
 ];
-const web_data = [
-  {}
-]
+const mob_data1 = [
+  {
+    heading: "Wisho",
+    description:
+      "A Platform to Empower Admin Wishes This web solution is a centralized hub for streamlining interactions with users",
+    image: "/assets/wisho.png",
+  },
+  {
+    heading: "Hyve",
+    description:
+      "Revolutionize your shopping experience with Hyve, a cutting-edge app that brings convenience and speed to your doorstep, making everyday essentials just a tap away.",
+    image: "/assets/hyve.png",
+  },
+  {
+    heading: "Parking 24",
+    description:
+      "Simplify parking management with Parking24, an innovative platform that facilitates seamless coordination between parking owners and consumers, ensuring hassle-free parking solutions.",
+    image: "/assets/parking24.png",
+  },
+];
+const mob_data2 = [
+  {
+    desc: "With our extensive resources, Hyve can swiftly become your reliable IT partner for mobile development on iOS:",
+    p1: "Over 90 high-load iOS apps delivered",
+    p2: "More than 130 skilled iOS engineers in our team",
+    p3: "35% of our staff are senior specialists and team leaders",
+    p4: "9 years of combined iOS experience",
+  },
+  {
+    desc: "Hyve has everything in place to quickly start working on your mobile application development project for Android, tailored to your needs:",
+    p1: "Over 110 modern Android apps delivered",
+    p2: "More than 120 skilled Android engineers on our team",
+    p3: "40% of whom are senior specialists and team leaders",
+    p4: "13 years of experience with Android",
+  },
+  {
+    desc: "Hyve is the ideal choice for your cross-platform development projects. We have the expertise to deliver complete and timely solutions:",
+    p1: "Over 100 cross-platform experts employed",
+    p2: "35% of whom are senior specialists and team leads",
+    p3: "More than 80 cross-platform projects successfully completed",
+  },
+];
+const web_data = [{}];
 function changeTabs(mod, index) {
   let currentTab = index;
   if (mod === "mob") {
     tabHeading.innerHTML = mob_data[currentTab].heading;
     tabDesc.innerHTML = mob_data[currentTab].desc;
-    tabImg.attributes[0].value = mob_data[currentTab].imgPath;
+    tabImg.src = mob_data[currentTab].imgPath;
     document.getElementById("advantages-box").innerHTML = "";
     document.getElementById("limitations-box").innerHTML = "";
     document.getElementById("bestfor-box").innerHTML = "";
@@ -98,7 +141,7 @@ function changeTabs(mod, index) {
         advantage.innerHTML = `<div class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"></div><span class="ml-4">${item}</span>`;
         document.getElementById("advantages-box").appendChild(advantage);
       });
-    }else{
+    } else {
       document.getElementById("advantage-wrapper").style.display = "none";
     }
     if (mob_data[currentTab].limitations) {
@@ -116,7 +159,7 @@ function changeTabs(mod, index) {
         limitation.innerHTML = `<div class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"></div><span class="ml-4">${item}</span>`;
         document.getElementById("limitations-box").appendChild(limitation);
       });
-    }else{
+    } else {
       document.getElementById("limitation-wrapper").style.display = "none";
     }
     if (mob_data[currentTab].bestfor) {
@@ -134,8 +177,23 @@ function changeTabs(mod, index) {
         bestfor.innerHTML = `<div class="absolute top-2 p-1 bg-[#080907] rounded-full h-fit"></div><span class="ml-4">${item}</span>`;
         document.getElementById("bestfor-box").appendChild(bestfor);
       });
-    }else{
+    } else {
       document.getElementById("bestfor-wrapper").style.display = "none";
+    }
+  } else if (mod === "mob1") {
+    tabHeadingsecond.innerHTML = mob_data1[currentTab].heading;
+    tabDescsecond.innerHTML = mob_data1[currentTab].description;
+    tabImgsecond.src = mob_data1[currentTab].image;
+  } else if (mod === "mob2") {
+    document.getElementById("tab-desc-1").innerHTML =
+      mob_data2[currentTab].desc;
+    document.getElementById("tab-p-1").innerHTML = mob_data2[currentTab].p1;
+    document.getElementById("tab-p-2").innerHTML = mob_data2[currentTab].p2;
+    document.getElementById("tab-p-3").innerHTML = mob_data2[currentTab].p3;
+    if (!mob_data2[currentTab].p4) {
+      document.getElementById("tab-p-4").innerHTML="";
+    } else {
+      document.getElementById("tab-p-4").innerHTML = mob_data2[currentTab].p4;
     }
   }
 }
@@ -161,8 +219,7 @@ function hideDropdown() {
 }
 
 function showMobileNav() {
-
-  backwindow.addEventListener("click",closeMobileNav)
+  backwindow.addEventListener("click", closeMobileNav);
   backwindow.classList.add(
     "hidden",
     "fixed",
@@ -173,17 +230,17 @@ function showMobileNav() {
     "bg-[#000000]",
     "opacity-0",
     "z-50"
-  )
-  const tl = gsap.timeline()
+  );
+  const tl = gsap.timeline();
   tl.to(backwindow, {
-    display:"block",
+    display: "block",
     opacity: 0.7,
     duration: 0.5,
     ease: "power3.out",
-  })
+  });
   tl.to(mobileNavPanel, {
     right: 0,
-    opacity:100,
+    opacity: 100,
     zIndex: 999,
     duration: 0.5,
     ease: "power3.out",
@@ -198,10 +255,10 @@ function showMobileNav() {
 function closeMobileNav() {
   gsap.to(backwindow, {
     opacity: 0,
-    display:"none",
+    display: "none",
     duration: 0.5,
     ease: "power3.out",
-  })
+  });
   gsap.to(mobileNavPanel, {
     right: "-100%",
     zIndex: 0,
