@@ -177,6 +177,32 @@ const web_data2 = [
     p4: "Secure transaction processing for payments and billing",
   },
 ];
+const cross_data = [
+  {
+    heading:"Custom Cross-Platform Development",
+    desc:"Contact us to create a cross-platform app tailored to any purpose and industry."
+  },
+  {
+    heading:"Cross-Platform App Development Consulting",
+    desc:"Hyve offers expert guidance and professional advice for your cross-platform mobile application development."
+  },
+  {
+    heading:"Cross-Platform App Migration",
+    desc:"Hyve provides a seamless and secure process for converting your app to a cross-platform solution with minimal challenges."
+  },
+  {
+    heading:"Cross-Platform App Design",
+    desc:"Designing for cross-platform development can be complex. Hyve's experts are here to navigate and resolve these challenges."
+  },
+  {
+    heading:"Support and Maintenance",
+    desc:"Hyve's experienced cross-platform support engineers ensure your app operates flawlessly with maximum uptime."
+  },
+  {
+    heading:"Cross-Platform App QA",
+    desc:"Consult with our cross-platform app testing specialists to proactively identify and address any potential bugs."
+  },
+]
 function changeTabs(mod, index) {
   let currentTab = index;
   if (mod === "mob") {
@@ -272,6 +298,11 @@ function changeTabs(mod, index) {
     document.getElementById("tab-p-3").innerHTML = web_data2[currentTab].p3;
 
     document.getElementById("tab-p-4").innerHTML = web_data2[currentTab].p4;
+  }else if(mod==="crss"){
+
+    tabHeading.innerHTML = cross_data[currentTab].heading;
+    tabDesc.innerHTML = cross_data[currentTab].desc;
+    tabImg.src = cross_data[currentTab].image;
   }
 }
 
